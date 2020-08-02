@@ -32,12 +32,12 @@ img-master-dev:
   resource_group: group-dev-1
 img-master-alpine:
   stage: std
-  script: retry build "master/alpine/3.9" "silex/emacs:master-alpine"
+  script: retry build "master/alpine/3.10" "silex/emacs:master-alpine"
   needs:
   - img-master-alpine-dev
 img-master-alpine-dev:
   stage: dev
-  script: retry build "master/alpine/3.9/dev" "silex/emacs:master-alpine-dev"
+  script: retry build "master/alpine/3.10/dev" "silex/emacs:master-alpine-dev"
   resource_group: group-dev-1
 img-27.1:
   stage: std
@@ -50,12 +50,12 @@ img-27.1-dev:
   resource_group: group-dev-1
 img-27.1-alpine:
   stage: std
-  script: retry build "27.1/alpine/3.9" "silex/emacs:27.1-alpine silex/emacs:27-alpine silex/emacs:alpine"
+  script: retry build "27.1/alpine/3.10" "silex/emacs:27.1-alpine silex/emacs:27-alpine silex/emacs:alpine"
   needs:
   - img-27.1-alpine-dev
 img-27.1-alpine-dev:
   stage: dev
-  script: retry build "27.1/alpine/3.9/dev" "silex/emacs:27.1-alpine-dev silex/emacs:27-alpine-dev silex/emacs:alpine-dev"
+  script: retry build "27.1/alpine/3.10/dev" "silex/emacs:27.1-alpine-dev silex/emacs:27-alpine-dev silex/emacs:alpine-dev"
   resource_group: group-dev-2
 img-26.3:
   stage: std
@@ -68,12 +68,12 @@ img-26.3-dev:
   resource_group: group-dev-2
 img-26.3-alpine:
   stage: std
-  script: retry build "26.3/alpine/3.9" "silex/emacs:26.3-alpine silex/emacs:26-alpine"
+  script: retry build "26.3/alpine/3.10" "silex/emacs:26.3-alpine silex/emacs:26-alpine"
   needs:
   - img-26.3-alpine-dev
 img-26.3-alpine-dev:
   stage: dev
-  script: retry build "26.3/alpine/3.9/dev" "silex/emacs:26.3-alpine-dev silex/emacs:26-alpine-dev"
+  script: retry build "26.3/alpine/3.10/dev" "silex/emacs:26.3-alpine-dev silex/emacs:26-alpine-dev"
   resource_group: group-dev-2
 img-26.2:
   stage: std
@@ -86,12 +86,12 @@ img-26.2-dev:
   resource_group: group-dev-3
 img-26.2-alpine:
   stage: std
-  script: retry build "26.2/alpine/3.9" "silex/emacs:26.2-alpine"
+  script: retry build "26.2/alpine/3.10" "silex/emacs:26.2-alpine"
   needs:
   - img-26.2-alpine-dev
 img-26.2-alpine-dev:
   stage: dev
-  script: retry build "26.2/alpine/3.9/dev" "silex/emacs:26.2-alpine-dev"
+  script: retry build "26.2/alpine/3.10/dev" "silex/emacs:26.2-alpine-dev"
   resource_group: group-dev-3
 img-26.1:
   stage: std
@@ -104,12 +104,12 @@ img-26.1-dev:
   resource_group: group-dev-4
 img-26.1-alpine:
   stage: std
-  script: retry build "26.1/alpine/3.9" "silex/emacs:26.1-alpine"
+  script: retry build "26.1/alpine/3.10" "silex/emacs:26.1-alpine"
   needs:
   - img-26.1-alpine-dev
 img-26.1-alpine-dev:
   stage: dev
-  script: retry build "26.1/alpine/3.9/dev" "silex/emacs:26.1-alpine-dev"
+  script: retry build "26.1/alpine/3.10/dev" "silex/emacs:26.1-alpine-dev"
   resource_group: group-dev-4
 img-25.3:
   stage: std
@@ -122,12 +122,12 @@ img-25.3-dev:
   resource_group: group-dev-4
 img-25.3-alpine:
   stage: std
-  script: retry build "25.3/alpine/3.9" "silex/emacs:25.3-alpine silex/emacs:25-alpine"
+  script: retry build "25.3/alpine/3.10" "silex/emacs:25.3-alpine silex/emacs:25-alpine"
   needs:
   - img-25.3-alpine-dev
 img-25.3-alpine-dev:
   stage: dev
-  script: retry build "25.3/alpine/3.9/dev" "silex/emacs:25.3-alpine-dev silex/emacs:25-alpine-dev"
+  script: retry build "25.3/alpine/3.10/dev" "silex/emacs:25.3-alpine-dev silex/emacs:25-alpine-dev"
   resource_group: group-dev-5
 img-25.2:
   stage: std
@@ -140,12 +140,12 @@ img-25.2-dev:
   resource_group: group-dev-5
 img-25.2-alpine:
   stage: std
-  script: retry build "25.2/alpine/3.9" "silex/emacs:25.2-alpine"
+  script: retry build "25.2/alpine/3.10" "silex/emacs:25.2-alpine"
   needs:
   - img-25.2-alpine-dev
 img-25.2-alpine-dev:
   stage: dev
-  script: retry build "25.2/alpine/3.9/dev" "silex/emacs:25.2-alpine-dev"
+  script: retry build "25.2/alpine/3.10/dev" "silex/emacs:25.2-alpine-dev"
   resource_group: group-dev-5
 img-25.1:
   stage: std

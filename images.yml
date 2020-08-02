@@ -13,12 +13,12 @@
 - tags: [master-alpine]
   version: master
   branch: master
-  template: alpine/3.9
+  template: alpine/3.10
   depends: master-alpine-dev
 - tags: [master-alpine-dev]
   version: master
   branch: master
-  template: alpine/3.9/dev
+  template: alpine/3.10/dev
   configure: --with-modules
   cache: https://git.sv.gnu.org/git/emacs.git/refs/heads/master
 
@@ -35,12 +35,12 @@
 - tags: [27.1-alpine, 27-alpine, alpine]
   version: 27.1
   branch: emacs-27.1
-  template: alpine/3.9
+  template: alpine/3.10
   depends: 27.1-alpine-dev
 - tags: [27.1-alpine-dev, 27-alpine-dev, alpine-dev]
   version: 27.1
   branch: emacs-27.1
-  template: alpine/3.9/dev
+  template: alpine/3.10/dev
   configure: --with-modules
 
 - tags: [26.3, 26]
@@ -56,12 +56,12 @@
 - tags: [26.3-alpine, 26-alpine]
   version: 26.3
   branch: emacs-26.3
-  template: alpine/3.9
+  template: alpine/3.10
   depends: 26.3-alpine-dev
 - tags: [26.3-alpine-dev, 26-alpine-dev]
   version: 26.3
   branch: emacs-26.3
-  template: alpine/3.9/dev
+  template: alpine/3.10/dev
   configure: --with-modules
 
 - tags: [26.2]
@@ -77,12 +77,12 @@
 - tags: [26.2-alpine]
   version: 26.2
   branch: emacs-26.2
-  template: alpine/3.9
+  template: alpine/3.10
   depends: 26.2-alpine-dev
 - tags: [26.2-alpine-dev]
   version: 26.2
   branch: emacs-26.2
-  template: alpine/3.9/dev
+  template: alpine/3.10/dev
   configure: --with-modules
 
 - tags: [26.1]
@@ -98,12 +98,12 @@
 - tags: [26.1-alpine]
   version: 26.1
   branch: emacs-26.1
-  template: alpine/3.9
+  template: alpine/3.10
   depends: 26.1-alpine-dev
 - tags: [26.1-alpine-dev]
   version: 26.1
   branch: emacs-26.1
-  template: alpine/3.9/dev
+  template: alpine/3.10/dev
   configure: --with-modules
 
 - tags: [25.3, 25]
@@ -119,12 +119,12 @@
 - tags: [25.3-alpine, 25-alpine]
   version: 25.3
   branch: emacs-25.3
-  template: alpine/3.9
+  template: alpine/3.10
   depends: 25.3-alpine-dev
 - tags: [25.3-alpine-dev, 25-alpine-dev]
   version: 25.3
   branch: emacs-25.3
-  template: alpine/3.9/dev
+  template: alpine/3.10/dev
   configure: --with-modules
   patches:
     - https://git.alpinelinux.org/aports/plain/community/emacs/gamedir.patch?h=3.7-stable
@@ -144,12 +144,12 @@
 - tags: [25.2-alpine]
   version: 25.2
   branch: emacs-25.2
-  template: alpine/3.9
+  template: alpine/3.10
   depends: 25.2-alpine-dev
 - tags: [25.2-alpine-dev]
   version: 25.2
   branch: emacs-25.2
-  template: alpine/3.9/dev
+  template: alpine/3.10/dev
   configure: --with-modules
   patches:
     - https://git.alpinelinux.org/aports/plain/community/emacs/gamedir.patch?h=3.7-stable
