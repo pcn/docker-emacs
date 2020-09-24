@@ -21,15 +21,6 @@ teardown:
   stage: teardown
   script: teardown
   when: always
-img-master:
-  stage: std
-  script: retry build "master/ubuntu/18.04" "silex/emacs:master"
-  needs:
-  - img-master-dev
-img-master-dev:
-  stage: dev
-  script: retry build "master/ubuntu/18.04/dev" "silex/emacs:master-dev"
-  resource_group: group-dev-1
 img-master-alpine:
   stage: std
   script: retry build "master/alpine/3.12" "silex/emacs:master-alpine"
@@ -38,15 +29,6 @@ img-master-alpine:
 img-master-alpine-dev:
   stage: dev
   script: retry build "master/alpine/3.12/dev" "silex/emacs:master-alpine-dev"
-  resource_group: group-dev-1
-img-27.1:
-  stage: std
-  script: retry build "27.1/ubuntu/18.04" "silex/emacs:27.1 silex/emacs:27 silex/emacs:latest"
-  needs:
-  - img-27.1-dev
-img-27.1-dev:
-  stage: dev
-  script: retry build "27.1/ubuntu/18.04/dev" "silex/emacs:27.1-dev silex/emacs:27-dev silex/emacs:dev"
   resource_group: group-dev-1
 img-27.1-alpine:
   stage: std
@@ -57,15 +39,6 @@ img-27.1-alpine-dev:
   stage: dev
   script: retry build "27.1/alpine/3.12/dev" "silex/emacs:27.1-alpine-dev silex/emacs:27-alpine-dev silex/emacs:alpine-dev"
   resource_group: group-dev-2
-img-26.3:
-  stage: std
-  script: retry build "26.3/ubuntu/18.04" "silex/emacs:26.3 silex/emacs:26"
-  needs:
-  - img-26.3-dev
-img-26.3-dev:
-  stage: dev
-  script: retry build "26.3/ubuntu/18.04/dev" "silex/emacs:26.3-dev silex/emacs:26-dev"
-  resource_group: group-dev-2
 img-26.3-alpine:
   stage: std
   script: retry build "26.3/alpine/3.12" "silex/emacs:26.3-alpine silex/emacs:26-alpine"
@@ -75,15 +48,6 @@ img-26.3-alpine-dev:
   stage: dev
   script: retry build "26.3/alpine/3.12/dev" "silex/emacs:26.3-alpine-dev silex/emacs:26-alpine-dev"
   resource_group: group-dev-2
-img-26.2:
-  stage: std
-  script: retry build "26.2/ubuntu/18.04" "silex/emacs:26.2"
-  needs:
-  - img-26.2-dev
-img-26.2-dev:
-  stage: dev
-  script: retry build "26.2/ubuntu/18.04/dev" "silex/emacs:26.2-dev"
-  resource_group: group-dev-3
 img-26.2-alpine:
   stage: std
   script: retry build "26.2/alpine/3.12" "silex/emacs:26.2-alpine"
@@ -93,15 +57,6 @@ img-26.2-alpine-dev:
   stage: dev
   script: retry build "26.2/alpine/3.12/dev" "silex/emacs:26.2-alpine-dev"
   resource_group: group-dev-3
-img-26.1:
-  stage: std
-  script: retry build "26.1/ubuntu/18.04" "silex/emacs:26.1"
-  needs:
-  - img-26.1-dev
-img-26.1-dev:
-  stage: dev
-  script: retry build "26.1/ubuntu/18.04/dev" "silex/emacs:26.1-dev"
-  resource_group: group-dev-4
 img-26.1-alpine:
   stage: std
   script: retry build "26.1/alpine/3.12" "silex/emacs:26.1-alpine"
@@ -110,15 +65,6 @@ img-26.1-alpine:
 img-26.1-alpine-dev:
   stage: dev
   script: retry build "26.1/alpine/3.12/dev" "silex/emacs:26.1-alpine-dev"
-  resource_group: group-dev-4
-img-25.3:
-  stage: std
-  script: retry build "25.3/ubuntu/18.04" "silex/emacs:25.3 silex/emacs:25"
-  needs:
-  - img-25.3-dev
-img-25.3-dev:
-  stage: dev
-  script: retry build "25.3/ubuntu/18.04/dev" "silex/emacs:25.3-dev silex/emacs:25-dev"
   resource_group: group-dev-4
 img-25.3-alpine:
   stage: std
@@ -129,15 +75,6 @@ img-25.3-alpine-dev:
   stage: dev
   script: retry build "25.3/alpine/3.12/dev" "silex/emacs:25.3-alpine-dev silex/emacs:25-alpine-dev"
   resource_group: group-dev-5
-img-25.2:
-  stage: std
-  script: retry build "25.2/ubuntu/18.04" "silex/emacs:25.2"
-  needs:
-  - img-25.2-dev
-img-25.2-dev:
-  stage: dev
-  script: retry build "25.2/ubuntu/18.04/dev" "silex/emacs:25.2-dev"
-  resource_group: group-dev-5
 img-25.2-alpine:
   stage: std
   script: retry build "25.2/alpine/3.12" "silex/emacs:25.2-alpine"
@@ -147,70 +84,3 @@ img-25.2-alpine-dev:
   stage: dev
   script: retry build "25.2/alpine/3.12/dev" "silex/emacs:25.2-alpine-dev"
   resource_group: group-dev-5
-img-25.1:
-  stage: std
-  script: retry build "25.1/ubuntu/18.04" "silex/emacs:25.1"
-  needs:
-  - img-25.1-dev
-img-25.1-dev:
-  stage: dev
-  script: retry build "25.1/ubuntu/18.04/dev" "silex/emacs:25.1-dev"
-  resource_group: group-dev-6
-img-24.5:
-  stage: std
-  script: retry build "24.5/ubuntu/18.04" "silex/emacs:24.5 silex/emacs:24"
-  needs:
-  - img-24.5-dev
-img-24.5-dev:
-  stage: dev
-  script: retry build "24.5/ubuntu/18.04/dev" "silex/emacs:24.5-dev silex/emacs:24-dev"
-  resource_group: group-dev-6
-img-24.4:
-  stage: std
-  script: retry build "24.4/ubuntu/14.04" "silex/emacs:24.4"
-  needs:
-  - img-24.4-dev
-img-24.4-dev:
-  stage: dev
-  script: retry build "24.4/ubuntu/14.04/dev" "silex/emacs:24.4-dev"
-  resource_group: group-dev-7
-img-24.3:
-  stage: std
-  script: retry build "24.3/ubuntu/14.04" "silex/emacs:24.3"
-  needs:
-  - img-24.3-dev
-img-24.3-dev:
-  stage: dev
-  script: retry build "24.3/ubuntu/14.04/dev" "silex/emacs:24.3-dev"
-  resource_group: group-dev-7
-img-24.2:
-  stage: std
-  script: retry build "24.2/ubuntu/14.04" "silex/emacs:24.2"
-  needs:
-  - img-24.2-dev
-img-24.2-dev:
-  stage: dev
-  script: retry build "24.2/ubuntu/14.04/dev" "silex/emacs:24.2-dev"
-  resource_group: group-dev-7
-img-24.1:
-  stage: std
-  script: retry build "24.1/ubuntu/14.04" "silex/emacs:24.1"
-  needs:
-  - img-24.1-dev
-img-24.1-dev:
-  stage: dev
-  script: retry build "24.1/ubuntu/14.04/dev" "silex/emacs:24.1-dev"
-  resource_group: group-dev-8
-img-23.4:
-  stage: std
-  script: retry build "23.4/ubuntu/14.04/bootstrap" "silex/emacs:23.4 silex/emacs:23"
-  needs:
-  - img-23.4-dev
-  variables:
-    DOCKER_PLATFORMS: linux/amd64,linux/386
-img-23.4-dev:
-  stage: dev
-  script: retry build "23.4/ubuntu/14.04/bootstrap/dev" "silex/emacs:23.4-dev silex/emacs:23-dev"
-  resource_group: group-dev-8
-  variables:
-    DOCKER_PLATFORMS: linux/amd64,linux/386
