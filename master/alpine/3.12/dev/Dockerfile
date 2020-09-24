@@ -41,8 +41,10 @@ RUN git clone --depth 1 --branch master git://git.sv.gnu.org/emacs.git /opt/emac
     cd /opt/emacs && \
     ./autogen.sh && \
     ./configure --build="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" --with-modules && \
+    apk del --no-cache git && \
     make && \
-    make install
+    make install && \
+    apk add --no-cache git
 
 RUN mkdir -p /root/.emacs.d/elpa/gnupg && \
     chmod 700 /root/.emacs.d/elpa/gnupg && \
